@@ -1,0 +1,95 @@
+<template>
+   <!-- <div class=" total slds-grid slds-gutters slds-border_bottom ">
+        <h2><strong>Buyer Information</strong></h2><br>
+      <div class="slds-col slds-border_right" >
+         <br>
+        {userName}
+        {phoneNumber}
+        {email}
+        <br>
+        <Strong>Delivery Instructions</Strong><br>
+        {shippingInstructions}
+        
+        
+      </div>
+      <div class=" total slds-col ">
+        <h2><Strong>Shipping Address</Strong></h2>
+        <div class=" slds-p-around_medium slds-border_right">
+          <lightning-formatted-address
+          street={shippingstreet}
+          city={shippingcity}
+          country={shippingcountry}
+          province={shippingstate}
+          postal-code={shippingpostalCode}
+          disabled  
+          ></lightning-formatted-address>
+        </div>
+      </div>
+      <div class=" total slds-col">
+        <h2><Strong>Billing Address</Strong></h2>
+        <div class="showAddress slds-p-around_medium">
+            <lightning-formatted-address
+            street={billingstreet}
+            city={billingcity}
+            country={billingcountry}
+            province={billingstate}
+            postal-code={billingpostalCode}
+            disabled
+            ></lightning-formatted-address>
+        </div>
+        
+      </div>
+    </div> -->
+
+    <lightning-layout  >
+      <lightning-layout-item flexibility="auto" padding="horizontal-medium" class = "bottomspace total slds-p-around_medium">
+        <h2>Buyer Information</h2>
+        <div class="slds-p-around_medium">
+          <h3><Strong>{userName}</Strong></h3>
+          <h3>{phoneNumber}</h3>
+          <h3>{email}</h3>
+
+        </div>
+        
+        <h2>Delivery Instructions</h2>
+        <div class="slds-p-around_medium">
+          <h3>{shippingInstructions}</h3>
+        </div>
+        
+
+      </lightning-layout-item>
+      <lightning-layout-item flexibility="auto" padding="horizontal-medium"  class = "bottomspace total slds-p-around_medium">
+        <h2>Shipping Address</h2>
+      <div class=" slds-p-around_medium">
+        <lightning-formatted-address
+        street={shippingstreet}
+        city={shippingcity}
+        country={shippingcountry}
+        province={shippingstate}
+        postal-code={shippingpostalCode}
+        disabled
+        ></lightning-formatted-address>
+      </div>
+        
+
+      </lightning-layout-item>
+      <lightning-layout-item flexibility="auto" padding="horizontal-medium" alignment-bump="" class = "bottomspace total slds-p-around_medium ">
+        <h2>Billing Address</h2>
+        <div class="showAddress slds-p-around_medium">
+            <lightning-formatted-address
+            street={billingstreet}
+            city={billingcity}
+            country={billingcountry}
+            province={billingstate}
+            postal-code={billingpostalCode}
+            disabled
+            ></lightning-formatted-address>
+        </div>
+
+      </lightning-layout-item>
+    </lightning-layout>
+  
+
+
+      
+  </template>

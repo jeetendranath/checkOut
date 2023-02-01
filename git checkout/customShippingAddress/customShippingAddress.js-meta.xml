@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Custom Shipping Address</masterLabel>
+    <!--https://niksdeveloper.com/salesforce/how-to-use-lwc-in-flow/#:~:text=To%20make%20LWC%20available%20in,get%20the%20data%20from%20Flow.-->
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="strRecordId" type="String" label="Cart Id"  description="cart Id of the current record"/>
+            <property name="value" type="String" label="Shipping Address ID"  description="Shipping Address" />
+            <property name="billingValue" type="String" label="Billing Address Id"  description="Billing Address" role="outputOnly"/>
+            <property name="isShowCartSummary" type="Boolean" label="Show CartSummary"  description="Cart Summary" role="inputOnly"/>
+            <property name="instructions" type="String" label="Instructions"  description="Instructions" role="outputOnly"/>
+
+            <property name="defaultStreet" type="String" label="Street"  description="Street" role="outputOnly"/>
+            <property name="defaultCity" type="String" label="City"  description="City" role="outputOnly"/>
+            <property name="defaultState" type="String" label="State"  description="State" role="outputOnly"/>
+            <property name="defaultCountry" type="String" label="Country"  description="Country" role="outputOnly"/>
+            <property name="defaultPostalCode" type="String" label="PostalCode"  description="PostalCode" role="outputOnly"/>
+            <property name="defaultName" type="String" label="Name"  description="Name" role="outputOnly"/>
+            <property name="saveAddress" type="Boolean" label="IsSaveAddress"  description="Save Address" role="outputOnly"/>
+            <property name="saveAddressString" type="String" label="IsSaveAddressString"  description="Save Address" role="outputOnly"/>
+            <property name="isSaveAddress" type="Boolean" label="IsSaveAddress"  description="Save Address" role="outputOnly"/>
+
+           
+            
+
+                        
+        </targetConfig>
+    </targetConfigs>
+
+</LightningComponentBundle>

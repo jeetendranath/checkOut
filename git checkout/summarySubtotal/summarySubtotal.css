@@ -1,0 +1,46 @@
+.form-bg {
+    background-color: rgb(242, 242, 242);
+    border-radius: 20px;
+}
+
+.txtType{
+    color: #031723 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    max-width: 300px !important;
+}
+
+
+lightning-input{
+    --slds-c-input-radius-border: 3rem;
+}
+
+.txtAlign{
+    text-align: right;
+    
+}
+
+.txttotal{
+    text-align: right;
+    color: rgb(38, 46, 118) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    max-width: 300px !important;
+}
+
+.upperspace{
+    margin-top: 10px;
+}
+.total{
+    color: rgb(38, 46, 118) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    max-width: 300px !important;
+    
+}
+
+h5{
+    
+    font-size: x-small;
+
+}
