@@ -1,0 +1,166 @@
+<template>
+    <!--<table class="slds-table slds-table_cell-buffer slds-table_bordered" border="1" cellspacing="0" cellpadding="0" bordercolor="#ccc" style="border-collapse:collapse;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>SKU</th>
+                <th>Unit Price</th>
+                <th>QTY</th>
+                <th>Sales Price</th>
+                <th>Total Sales Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={records} for:item="cartItem">
+                <tr key={cartItem.Id}>
+                    <td>{cartItem.Name}</td>
+                    <td>{cartItem.Sku}</td>
+                    <td>{cartItem.ListPrice}</td>
+                    <td>{cartItem.Quantity}</td>
+                    <td>{cartItem.SalesPrice}</td>
+                    <td>{cartItem.TotalAmount}</td>
+                </tr>
+            </template>
+        </tbody>
+        </table> -->
+        <div if:false={isOrderSummary}>
+        <lightning-layout >
+          <lightning-layout-item  flexibility="auto" class="total">
+            <div class="listItems" >
+              <div class="slds-p-around_x-small slds-text-title_caps">
+                <h2>Your Products</h2>
+              </div>
+              
+            <div class="slds-grid slds-gutters slds-p-around_medium slds-border_bottom slds-align_absolute-center fonts">
+                
+                <div class="slds-col slds-size_2-of-12">
+                    Name          
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                      SKU        
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                    Unit Price          
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                        QTY      
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                           Sales Price   
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                          Total Sales Price    
+                  </div>
+                  
+    
+            </div>
+            
+            
+            <template for:each={records} for:item="cartItem">
+    
+            <div class="slds-grid slds-gutters slds-m-top_small slds-align_right bottomspace" key={cartItem.Id} >
+                
+                <div class="slds-col slds-size_2-of-12">
+                    <Strong>{cartItem.Name}</Strong>         
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                    {cartItem.Sku}       
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                    {cartItem.ListPrice}        
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                    {cartItem.Quantity}    
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                    ${cartItem.SalesPrice} 
+                  </div>
+                  <div class="slds-col slds-size_2-of-12">
+                    <Strong>${cartItem.TotalAmount}</Strong>
+                  </div>
+                  
+               
+    
+            </div>
+        </template>
+    </div>
+
+
+          </lightning-layout-item>
+  </lightning-layout>
+</div>
+        
+       
+
+
+<lightning-layout if:true={isOrderSummary}>
+  <lightning-layout-item flexibility="auto" class="total">
+    <div class=" listItems" >
+      <div class="slds-p-around_x-small slds-text-title_caps">
+        <h2>Your Products</h2>
+      </div>
+      
+      <div class="slds-grid slds-gutters slds-p-around_medium slds-border_bottom slds-align_absolute-center fonts">
+          
+          <div class="slds-col slds-size_2-of-12">
+              Name          
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+                SKU        
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              Unit Price          
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+                  QTY      
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+                     Sales Price   
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+                    Total Sales Price    
+            </div>
+            
+    
+      </div>
+      
+      
+      <template for:each={records} for:item="cartItem">
+    
+      <div class="slds-grid slds-gutters slds-m-top_small slds-align_right bottomspace" key={cartItem.Id} >
+          
+          <div class="slds-col slds-size_2-of-12">
+             <Strong>{cartItem.Name}</Strong>          
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              {cartItem.StockKeepingUnit}       
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              {cartItem.ListPrice}        
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              {cartItem.QuantityOrdered}    
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              ${cartItem.UnitPrice} 
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              <Strong>${cartItem.TotalLineAmount}</Strong>
+            </div>
+            
+         
+    
+      </div>
+    </template>
+    </div>
+    
+    
+  </lightning-layout-item>
+</lightning-layout>
+
+
+
+
+
+    
+</template>

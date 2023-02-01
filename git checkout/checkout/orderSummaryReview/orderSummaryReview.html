@@ -1,0 +1,54 @@
+<template>
+   
+    <lightning-layout  >
+      <lightning-layout-item flexibility="auto" padding="horizontal-medium" class = "bottomspace total slds-p-around_medium">
+        <h2>Buyer Information</h2>
+        <div class="slds-p-around_medium">
+          <h3><Strong>{userDetails.Username}</Strong></h3>
+          <h3>{userDetails.Phonenumber}</h3>
+          <h3>{userDetails.Email}</h3>
+
+        </div>
+        
+        <h2>Delivery Instructions</h2>
+        <div class="slds-p-around_medium">
+          <h3>{shippingInstructions}</h3>
+        </div>
+        
+
+      </lightning-layout-item>
+      <lightning-layout-item flexibility="auto" padding="horizontal-medium"  class = "bottomspace total slds-p-around_medium">
+        <h2>Shipping Address</h2>
+      <div class=" slds-p-around_medium">
+        <lightning-formatted-address
+        street={shippingAddress.Street}
+        city={shippingAddress.City}
+        country={shippingAddress.Country}
+        province={shippingAddress.State}
+        postal-code={shippingAddress.PostalCode}
+        disabled
+        ></lightning-formatted-address>
+      </div>
+        
+
+      </lightning-layout-item>
+      <lightning-layout-item flexibility="auto" padding="horizontal-medium" alignment-bump="" class = "bottomspace total slds-p-around_medium ">
+        <h2>Billing Address</h2>
+        <div class="showAddress slds-p-around_medium">
+            <lightning-formatted-address
+            street={billingAddress.Street}
+            city={billingAddress.City}
+            country={billingAddress.Country}
+            province={billingAddress.State}
+            postal-code={billingAddress.PostalCode}
+            disabled
+            ></lightning-formatted-address>
+        </div>
+
+      </lightning-layout-item>
+    </lightning-layout>
+  
+
+
+      
+  </template>
